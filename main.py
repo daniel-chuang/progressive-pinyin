@@ -46,10 +46,12 @@ print(all_chinese_list)
 all_pinyin = open("word-list/all-pinyin.txt", "r")
 
 # Streamlit app setup
-st.markdown("""
-# Progressive Pinyin
-## Pinyin as a tool for learning, not a crutch
-""")
+st.markdown("# Progressive Pinyin")
+with st.expander("Pinyin as a tool for learning, not a crutch", expanded=True):
+    st.markdown("""Hanyu pinyin is a romanization system of Chinese characters. I believe that pinyin
+should be used as a tool for learning Chinese, not as a crutch. This app slowly
+transitions you away from only reading pinyin on Chinese text, while not throwing you
+into impossible Chinese characters off the get-go.""")
 
 # Empty space
 st.markdown("")
@@ -133,3 +135,14 @@ elif sort_type == "Frequency of Usage":
 if len(input) != 0:
     st.markdown("### Custom Tagged Text")
 annotated_text(*output)
+
+# Color key:
+st.markdown("### Tagging Color Key")
+key_text = [
+    ("Word not in list", "", "#" + rgb_to_hex(11,9.5,1)),
+    ("Word very frequently used", "", "#" + rgb_to_hex(0,7,15)),
+    ("Word infrequently used", "", "#" + rgb_to_hex(0,4,8)),
+    ("Word in list of highlights", "", "#" + rgb_to_hex(5,12,0))
+    ]
+annotated_text(*key_text[0:2])
+annotated_text(*key_text[2:])
