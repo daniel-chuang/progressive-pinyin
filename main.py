@@ -21,9 +21,7 @@
 """
 
 # Imports
-from xml.etree.ElementInclude import include
 import streamlit as st
-import os
 import pinyin
 import hanzidentifier as hzid
 from annotated_text import annotated_text
