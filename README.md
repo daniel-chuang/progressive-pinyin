@@ -8,4 +8,4 @@ transitions you away from only reading pinyin on Chinese text, while not throwin
 into impossible Chinese characters off the get-go.
 
 ## Where's the website?
-tinyurl.com/progressive-pinyin
+[tinyurl.com/progressive-pinyin](tinyurl.com/progressive-pinyin)
